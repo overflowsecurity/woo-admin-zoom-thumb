@@ -1,7 +1,7 @@
 <?php
 /*
-    Plugin Name: Woocommerce Shipping by Item Pricing
-    description: This plugin makes it possible to price shipping by number of items.
+    Plugin Name: Woocommerce Admin Zoom Thumb
+    description: This plugin makes products on the All Products page in the backend enlarge on mouseover to make it easier to see them.
     Author: Justin Tharpe
     Version: Beta 1.0.0
 */
