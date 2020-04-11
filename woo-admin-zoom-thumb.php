@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) die('No direct access allowed');
 
 function create_admin_zoom(){
 
-    wp_register_style( 'jt-style', plugins_url('css/jt_admin.css', __FILE__) );
+    wp_register_style( 'jt-style', plugins_url('/css/jt_admin.css', __FILE__) );
 }
 add_action('admin_enqueue_scripts', 'create_admin_zoom');
 
