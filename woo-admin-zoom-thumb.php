@@ -13,6 +13,5 @@ function create_admin_zoom(){
 
     wp_enqueue_style('admin-styles', get_plugin_directory_uri().'/css/jt_admin.css');
 
-
+}
 add_action('admin_enqueue_scripts', 'create_admin_zoom');
-//new create_admin_zoom();
