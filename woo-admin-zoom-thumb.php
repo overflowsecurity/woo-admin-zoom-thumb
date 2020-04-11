@@ -11,12 +11,8 @@ if (!defined('ABSPATH')) die('No direct access allowed');
 
 function create_admin_zoom(){
 
-    // Update CSS within in Admin
-    function admin_style() {
     wp_enqueue_style('admin-styles', get_plugin_directory_uri().'/css/jt_admin.css');
-  
-  }
-  add_action('admin_enqueue_scripts', 'admin_style');
-}
 
-new create_admin_zoom();
+
+add_action('admin_enqueue_scripts', 'create_admin_zoom');
+//new create_admin_zoom();
