@@ -15,3 +15,5 @@ function create_admin_zoom(){
 
 }
 add_action('admin_enqueue_scripts', 'create_admin_zoom');
+
+?>
