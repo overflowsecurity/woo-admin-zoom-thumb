@@ -36,7 +36,7 @@ function jt_populate_image( $column_name ) {
 	if( $column_name  == 'jtimage' ) {
 		// if you suppose to display multiple brands, use foreach();
 		$x = $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );
-		echo $x[0];
+		echo "<img src=" . $x[0] . ">";
 	}
  
 }
