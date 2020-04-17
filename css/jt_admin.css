@@ -1,12 +1,3 @@
 img.attachment-thumbnail.size-thumbnail:hover{
     transform: scale(5.500);
 }
-
-.table.wp-list-table,.td.column-thumb img {
-    margin: 0;
-    width: auto;
-    height: auto;
-    max-width: max-content;
-    max-height: max-content;
-    vertical-align: middle;
-}
