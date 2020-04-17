@@ -16,4 +16,28 @@ function create_admin_zoom(){
 }
 add_action('admin_enqueue_scripts', 'create_admin_zoom');
 
+
+
+
+add_filter( 'manage_edit-product_columns', 'jt_image_column', 20 );
+function jt_image_column( $columns_array ) {
+ 
+	// I want to display Images column just after the product name column
+	return array_slice( $columns_array, 0, 3, true )
+	+ array( 'jtimage' => 'Image' )
+	+ array_slice( $columns_array, 3, NULL, true );
+ 
+ 
+}
+ 
+add_action( 'manage_posts_custom_column', 'jt_populate_image' );
+function jt_populate_image( $column_name ) {
+ 
+	if( $column_name  == 'jtimage' ) {
+		// if you suppose to display multiple brands, use foreach();
+		$x = $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );
+		echo $x[0];
+	}
+ 
+}
 ?>
