@@ -36,8 +36,25 @@ function jt_populate_image( $column_name ) {
 	if( $column_name  == 'jtimage' ) {
 		// if you suppose to display multiple brands, use foreach();
 		$x = $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'thumbnail' );
-		echo '<a href="#greeting-modal"><img src=' . $x[0] . "></a>";
-	}
+		echo '<div id="app"><a href="#greeting-modal"><img src=' . $x[0] . '></a>
+                <div id="app">
+
+        <!-- Modal container -->
+        <div 
+            class="modal-container" 
+            id="greeting-modal">
+
+            <!-- Modal  -->
+            <div class="modal">
+            <h3>This is a modal</h3>
+            <p>This is the modals content.</p>
+            </div>
+
+            <!-- Background, click to close -->
+            <a href="#" class="modal-bg"></a>
+        </div>
+        </div>';
+    }
  
 }
 ?>
