@@ -33,26 +33,27 @@ function jt_image_column( $columns_array ) {
 add_action( 'manage_posts_custom_column', 'jt_populate_image' );
 function jt_populate_image( $column_name ) {
  
-	if( $column_name  == 'thumb' ) {
+	if( $column_name  == 'jtimage' ) {
 		// if you suppose to display multiple brands, use foreach();
         $x = $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'medium' ); 
         
-		echo '<div id="app">
-        <div id="app"><a href="#greeting-modal"><img src=' . $x[0] . '></a>
-        <!-- Modal container -->
-        <div 
-            class="modal-container" 
-            id="greeting-modal">
+        echo '
+        <script src=' . plugins_url('/js/jt_admin.js', __FILE__) . '></script>
+        <img id="myImg" src="' . $x[0] . '" alt="" style="width:100%;max-width:300px">
 
-            <!-- Modal  -->
-            <div class="modal">
-            <img src=' . $x[0] . '>
-            </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
 
-            <!-- Background, click to close -->
-            <a href="#" class="modal-bg"></a>
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
         </div>
-        </div>';
+        ';
     }
  
 }
