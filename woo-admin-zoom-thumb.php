@@ -35,7 +35,7 @@ function jt_populate_image( $column_name ) {
  
 	if( $column_name  == 'jtimage' ) {
 		// if you suppose to display multiple brands, use foreach();
-        $x = $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'thumbnail' ); 
+        $x = $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'medium' ); 
         
 		echo '<div id="app"><a href="#greeting-modal"><img src=' . $x[0] . '></a>
                 <div id="app">
@@ -47,8 +47,7 @@ function jt_populate_image( $column_name ) {
 
             <!-- Modal  -->
             <div class="modal">
-            ' .$y = $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), "single-post-thumbnail" ) . '
-            <img src=' . $y[0] . '>
+            <img src=' . $x[0] . '>
             </div>
 
             <!-- Background, click to close -->
