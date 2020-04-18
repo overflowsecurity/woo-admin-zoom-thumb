@@ -33,7 +33,7 @@ function jt_image_column( $columns_array ) {
 add_action( 'manage_posts_custom_column', 'jt_populate_image' );
 function jt_populate_image( $column_name ) {
  
-	if( $column_name  == 'jtimage' ) {
+	if( $column_name  == 'image' ) {
 		// if you suppose to display multiple brands, use foreach();
         $x = $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'medium' ); 
         
