@@ -2,6 +2,9 @@ img.attachment-thumbnail.size-thumbnail:hover{
     transform: scale(5.500);
 }
 
+#myImg:hover{
+  transform: scale(5.500);
+}
 
 
 #myImg {
