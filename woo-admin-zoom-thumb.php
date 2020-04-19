@@ -17,7 +17,7 @@ function create_admin_zoom(){
 add_action('admin_enqueue_scripts', 'create_admin_zoom');
 
 
-/* 
+
 
 add_filter( 'manage_edit-product_columns', 'jt_image_column', 20 );
 function jt_image_column( $columns_array ) {
@@ -56,5 +56,5 @@ function jt_populate_image( $column_name ) {
         ';
     }
  
-} */
+}
 ?>
