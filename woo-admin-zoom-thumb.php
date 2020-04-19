@@ -29,6 +29,29 @@ function jt_image_column( $columns_array ) {
  
  
 }
+
+add_filter( 'manage_edit-product_columns', 'jt_prodid_column', 20 );
+function jt_prodid_column( $columns_array ) {
+ 
+	// I want to display Images column just after the product name column
+	return array_slice( $columns_array, 0, 3, true )
+	+ array( 'jtprodid' => 'Image' )
+	+ array_slice( $columns_array, 3, NULL, true );
+ 
+ 
+}
+
+add_action( 'manage_posts_custom_column', 'jt_populate_prodid' );
+function jt_populate_prodid( $column_name ) {
+ 
+	if( $column_name  == 'jtimage' ) {
+
+        $jtid = $loop->post->ID;
+
+        echo $jtid;
+    }
+
+}
  
 add_action( 'manage_posts_custom_column', 'jt_populate_image' );
 function jt_populate_image( $column_name ) {
