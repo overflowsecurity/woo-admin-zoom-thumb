@@ -46,9 +46,8 @@ function jt_populate_prodid( $column_name ) {
  
 	if( $column_name  == 'jtprodid' ) {
         $product = wc_get_product( $product_id );
-        $jtid = $product->get_id();
 
-        echo $jtid;
+        echo $product;
     }
 
 }
