@@ -35,7 +35,7 @@ function jt_prodid_column( $columns_array ) {
  
 	// I want to display Images column just after the product name column
 	return array_slice( $columns_array, 0, 3, true )
-	+ array( 'jtprodid' => 'Image' )
+	+ array( 'jtprodid' => 'Product ID' )
 	+ array_slice( $columns_array, 3, NULL, true );
  
  
@@ -44,7 +44,7 @@ function jt_prodid_column( $columns_array ) {
 add_action( 'manage_posts_custom_column', 'jt_populate_prodid' );
 function jt_populate_prodid( $column_name ) {
  
-	if( $column_name  == 'jtimage' ) {
+	if( $column_name  == 'jtprodid' ) {
 
         $jtid = $loop->post->ID;
 
