@@ -45,7 +45,7 @@ add_action( 'manage_posts_custom_column', 'jt_populate_prodid' );
 function jt_populate_prodid( $column_name ) {
  
 	if( $column_name  == 'jtprodid' ) {
-        $product = wc_get_product( $product_id );
+        $product = get_the_ID();
 
         echo "<p>" . $product . "</p>";
     }
