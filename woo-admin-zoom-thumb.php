@@ -61,20 +61,7 @@ function jt_populate_image( $column_name ) {
         
         echo '
         <script src=' . plugins_url('/js/jt_admin.js', __FILE__) . '></script>
-        <img id="myImg" src="' . $x[0] . '" alt="" style="width:100%;max-width:300px">
-
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-        <!-- The Close Button -->
-        <span class="close">&times;</span>
-
-        <!-- Modal Content (The Image) -->
-        <img class="modal-content" id="img01">
-
-        <!-- Modal Caption (Image Text) -->
-        <div id="caption"></div>
-        </div>
+        <img id="myImg" src="' . $x[0] . '" alt="" ">
         ';
     }
  
