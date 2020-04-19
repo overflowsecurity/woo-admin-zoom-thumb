@@ -46,7 +46,7 @@ function jt_populate_prodid( $column_name ) {
  
 	if( $column_name  == 'jtprodid' ) {
 
-        $jtid = $loop->post->ID;
+        $jtid = $product->get_id();
 
         echo $jtid;
     }
