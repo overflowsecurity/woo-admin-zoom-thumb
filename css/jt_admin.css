@@ -12,7 +12,7 @@ img.attachment-thumbnail.size-thumbnail:hover{
   transform: scale(2.5);
 }
 
-.td.jtprodid.column-jtprodid p {
+.jtprodid p {
   font-size: xx-large;
   font-weight: bold;
 }
