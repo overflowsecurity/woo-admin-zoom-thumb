@@ -13,6 +13,6 @@ img.attachment-thumbnail.size-thumbnail:hover{
 }
 
 .jtprodid p {
-  font-size: xx-large;
-  font-weight: bold;
+  font-size: xx-large !important;
+  font-weight: bold !important;
 }
