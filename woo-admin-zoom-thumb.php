@@ -3,7 +3,9 @@
     Plugin Name: Woocommerce Admin Zoom Thumb
     description: This plugin makes products on the All Products page in the backend enlarge on mouseover to make it easier to see them.
     Author: Justin Tharpe
-    Version: Beta 1.0.0
+    Version: 1.0.0
+    Tested Up To: 5.4.1
+    WC tested up to: 4.1.0
 */
 
 
